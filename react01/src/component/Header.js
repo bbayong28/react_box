@@ -1,13 +1,21 @@
 import React from 'react';
+import Nav from "./Nav";
 
-const Header = () => {
-
+function Header() {
     return (
-        <div className='Header'>
-        <p>Header 자리이다!</p>
+      <header className="Header">
+        <div className="h_inner">
+          <div className="h_lt">
+            <h1 className="h_logo">
+              <a><p>LOGO</p></a>
+            </h1>
+          </div>
+          <div className="h_rt">
+            <Nav/>
+          </div>
         </div>
-    )
-
-}
+      </header>
+    );
+  }
 
 export default Header
