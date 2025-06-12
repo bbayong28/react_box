@@ -6,7 +6,7 @@ function Nav(props){
         let t = props.menus[i];
         mnu_li.push(<li key={t.id}><a href={'/menu' + t.id} id={t.id} onClick={e => {
             e.preventDefault();
-            props.onChangeMode(e.target.id);
+            props.onChangeMode(Number(e.target.id));
         }}>{t.menuName}</a></li>);
     }
     
