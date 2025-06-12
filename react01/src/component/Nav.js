@@ -1,16 +1,21 @@
 import React from 'react';
 
-
-const Nav = () => { 
-    return (
-        <nav>
-            <ul className="gnb">
-                <li><a href="">Menu1</a></li>
-                <li><a href="">Menu2</a></li>
-                <li><a href="">Menu3</a></li>
-                <li><a href="">Menu4</a></li>
-            </ul>
-        </nav>
+function Nav(props){
+    const mnu_li= []
+    for (let i = 0; i<props.menus.length; i++){
+        let t = props.menus[i];
+        mnu_li.push(<li key={t.id}><a href={'/menu' + t.id} id={t.id} onClick={e => {
+            e.preventDefault();
+            props.onChangeMode(e.target.id);
+        }}>{t.menuName}</a></li>);
+    }
+    
+    return(
+    <nav>
+        <ul>
+        {mnu_li}
+        </ul>
+    </nav>
     )
 }
 

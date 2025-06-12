@@ -1,21 +1,16 @@
 import React from 'react';
-import Nav from "./Nav";
 
-function Header() {
-    return (
-      <header className="Header">
-        <div className="h_inner">
-          <div className="h_lt">
-            <h1 className="h_logo">
-              <a><p>LOGO</p></a>
-            </h1>
-          </div>
-          <div className="h_rt">
-            <Nav/>
-          </div>
-        </div>
-      </header>
-    );
-  }
+function Header(props){
+  // console.log('props', props, props.title);
+  return(
+    <header>
+      <h1><a href="" onClick={function(e){
+        e.preventDefault();
+        props.onChangeMode();
+
+      }}>{props.title}</a></h1>
+    </header>
+  )
+}
 
 export default Header
