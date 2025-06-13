@@ -1,0 +1,178 @@
+
+/* font */
+@font-face {
+    font-family: 'Pretendard-Thin';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-ExtraLight';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Light';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+font-family: 'Pretendard-Regular';
+src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Medium';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-SemiBold';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Black';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+:root {
+--font-pre100: 'Pretendard-Thin';
+--font-pre200: 'Pretendard-ExtraLight';
+--font-pre300: 'Pretendard-Light';
+--font-pre400: 'Pretendard-Regular';
+--font-pre500: 'Pretendard-Medium';
+--font-pre600: 'Pretendard-SemiBold';
+--font-pre700: 'Pretendard-Bold';
+--font-pre800: 'Pretendard-ExtraBold';
+--font-pre900: 'Pretendard-Black';
+}
+
+
+
+
+
+
+/* 로그인페이지 */
+.Login{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    background: #f7f7f7;
+    margin: 0 auto;
+    height: 100vh;
+}
+.Login .txt_wrap{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.Login .txt_wrap p{
+    font-size: 30px;
+    font-family: var(--font-pre600);
+}
+
+/* 폼영역 */
+.Login .form_wrap{
+    flex: 1;
+}
+.Login .form_wrap .form_wrap{
+}
+.Login .form_wrap form{
+    height: 100%;
+}
+.Login .form_wrap .form_in{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Login .form_wrap .form_in .ip_wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+.Login .form_wrap .form_in .ip_wrap .ip_line{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.Login .form_wrap .form_in .ip_wrap .ip_line>p{
+    font-size: 17px;
+    font-family: var(--font-pre300);
+}
+.Login .form_wrap .form_in .ip_wrap .ip_line .ip_box{}
+.Login .form_wrap .form_in .ip_wrap .ip_line .ip_box input{
+    font-family: var(--font-pre400);
+    padding: 15px 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.Login .form_wrap .form_in .ip_wrap .ip_line .ip_box input:focus-within{
+    border: 1px solid #9e38f4;
+}
+.Login .form_wrap .form_in .ip_wrap .ip_line .ip_box input::placeholder{
+    color: #c1c1c1;
+}
+
+.Login .form_wrap .form_in .ip_wrap .ip_line .ip_box .erMsg_wrap{
+    padding-top: 5px;
+}
+.Login .form_wrap .form_in .ip_wrap .ip_line .ip_box .erMsg_wrap p{
+    color: #e30000;
+    font-size: 13px;
+    font-family: var(--font-pre500);
+}
+
+
+
+
+/* 확인버튼영역 */
+.Login .form_wrap .form_in .sbm_wrap{
+    margin-bottom: 30px;
+    display: flex;
+}
+.Login .form_wrap .form_in .sbm_wrap button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    height: 45px;
+    font-size: 17px;
+    font-family: var(--font-pre600);
+    cursor: pointer;
+    background: #9e38f4;
+    color: #ffffff;
+    border: none;
+}
+
+
+.Login .form_wrap .form_in .sbm_wrap button:disabled{
+    background-color: #dadada;
+    color: #ffffff;
+}
